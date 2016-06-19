@@ -19,6 +19,7 @@ int wait_for_transmission = 5; // Delay in ms in order to receive the serial dat
 Servo SERVO2; 
 Servo SERVO3;
 Servo SERVO4;
+Servo SERVO5;
 
 int SERVO2_PIN = 2; // azimuth angle
 int SERVO3_PIN = 3; // altitude angle

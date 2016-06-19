@@ -23,6 +23,7 @@ Servo SERVO4;
 int SERVO2_PIN = 2; // azimuth angle
 int SERVO3_PIN = 3; // altitude angle
 int SERVO4_PIN = 4; // wrist angle
+int SERVO5_PIN = 5; // Clow angle
 
 
 void setup() {
@@ -38,6 +39,9 @@ void setup() {
     // servo3 limit 0-85
 
     SERVO4.attach(SERVO4_PIN);
+    SERVO4.write(90); // reset to original position
+    
+     SERVO4.attach(SERVO5_PIN);
     SERVO4.write(90); // reset to original position
 }
 
@@ -62,6 +66,11 @@ void servo_write(int pin_number, int servo_value){
      else if (pin_number == SERVO4_PIN) 
      {
        SERVO4.write(servo_value);
+       delay(10);
+     }
+      else if (pin_number == SERVO5_PIN) 
+     {
+       SERVO5.write(servo_value);
        delay(10);
      }
 
